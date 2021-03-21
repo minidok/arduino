@@ -37,7 +37,7 @@ Der Timer startet statt mit 0 mit folgendem Anfangszählerstand initcount = 65.5
 
 Das Timer-Register muss initial mit 34.286 starten, damit bis zum Timer Overflow – bei Überschreiten von 65.636 – genau eine halbe Sekunde vergeht. In jedem Durchlauf der Interrrupt-Service-Routine ist der Zähler jeweils wieder mit 34.286 initialisieren.
 
-Ein entsprechender Sketch ist in ISR_TimerOverflow enthalten.
+Ein entsprechender Sketch ist in [ISR_TimerOverflow](https://github.com/minidok/arduino/blob/master/ISR_TimerOverflow/ISR_TimerOverflow.ino) enthalten.
 
 ## World of Timers
 
@@ -114,4 +114,4 @@ Statt einen Interrupt bei Überlauf eines Timer-Registers auszulösen wie im obe
 
 Bei einem Prescaling von 256 und einer Taktfrequenz von 16 MHz können wir die obige Formel für count anwenden: count = deltaT * cpufreq / prescale = 0.5 * 16.000.000 / 256 = 31.256.
 
-Siehe ISR_TIMER_CTC.
+Siehe [ISR_TIMER_CTC.INO](https://github.com/minidok/arduino/blob/master/IST_Timer_CTC/IST_Timer_CTC.ino)
